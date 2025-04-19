@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab9_TicTacToe</string>
+    <string name="title_activity_start_game">StartGameActivity</string>
+</resources>

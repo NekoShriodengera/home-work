@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/playerTurnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:orientation="horizontal"
+        android:background="@android:color/black"
+        android:padding="4dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"  />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/ButtonStyle"
+            android:onClick="onCellClick"
+            android:layout_margin="1dp"
+            android:background="@android:color/white" />
+
+    </GridLayout>
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/resetRoundButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Скинути" />
+
+        <Button
+            android:id="@+id/backToStartButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="На початок" />
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Продовжити"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Рахунок — Гравець 1: 0 | Гравець 2: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
